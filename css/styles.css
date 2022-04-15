@@ -112,6 +112,9 @@
   .site-nav-link:focus {
     color: var(--accent-color);
   }
+  .active-link {
+    color: var(--accent-color);
+  }
   .auth-nav {
     display: flex;
   }
@@ -222,26 +225,7 @@
     line-height: 1.71;
     letter-spacing: 0.03em;
   }
-  .social-list {
-    display: flex;
-    align-items: center;
-    margin: 16px 32px 0px;
-  }
-  .social-item {
-    width: 44px;
-    height: 44px;
-    padding: 12px 12px;
-    border-radius: 50%;
-    fill: var(--icon-color);
-  }
-  .social-item:not(:last-child) {
-    margin-right: 10px;
-  }
-  .social-item:hover,
-  .social-item:focus {
-    background-color: #2196f3;
-    fill: var(--primary-white-color);
-  }
+  
   /*Чим ми займаємось*/
   .work {
     padding-top: 0px;
@@ -292,23 +276,55 @@
     text-align: center;
     letter-spacing: 0.03em;
   }
+  /*Соціальні мережі*/
+  .social-list {
+    display: flex;
+    align-items: center;
+    margin: 16px 32px 0px;
+  }
+  .social-item:not(:last-child) {
+    margin-right: 10px;
+  }
+  .social-link {
+    display: flex;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 12px 12px;
+    border-radius: 50%;
+    fill: var(--icon-color);
+  }
+  .social-link:hover,
+  .social-link:focus {
+    background-color: #2196f3;
+    fill: var(--primary-white-color);
+  }
   /*Клієнти*/
   .client-list {
     display: flex;
     align-items: center;
     margin-top: 50px;
   }
-  .client-item {
+  .client-item:not(:last-child) {
+    margin-right: 30px;
+  }
+  .client-link {
+    display: flex;
     width: 170px;
     height: 92px;
-    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    fill: var(--icon-color);
     border: 1px solid var(--icon-color);
     box-sizing: border-box;
     border-radius: 4px;
   }
-  .client-item:not(:last-child) {
-    margin-right: 30px;
+  .client-link:hover,
+  .client-link:focus {
+    fill: var(--accent-color);
+    border-color: var(--accent-color);
   }
+
   /*Підвал*/
   .page-footer {
     padding-top: 60px;
@@ -361,7 +377,9 @@
     color: var(--primary-white-color);
     margin-bottom: 20px;
   }
-  .footer-social-item {
+  .footer-social-link {
+    display: flex;
+    align-items: center;
     width: 44px;
     height: 44px;
     padding: 12px;
@@ -400,6 +418,10 @@
   .filters-button:focus {
     color: var(--primary-white-color);
     background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
   }
   /*Проекти*/
   .projects {
@@ -412,6 +434,14 @@
     margin-top: 30px;
     margin-left: 30px;
     flex-basis: calc((100% - 90px) / 3);
+  }
+  .projects-item:hover,
+  .projects-item:focus {
+    border: 1px solid var(--border-color);
+    box-sizing: border-box;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
   }
   .projects-content {
     padding: 20px 24px;
